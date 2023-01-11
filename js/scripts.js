@@ -1,11 +1,7 @@
 window.onload = function() {
-  // new line below
-  console.log("Script executing!");
-
   let form = document.querySelector("form");
   form.onsubmit = function(event) {
-    // new line below
-    console.log("Submit form successfully reached.");
+    event.preventDefault();
     const person1Input = document.getElementById("person1Input").value;
     const person2Input = document.getElementById("person2Input").value;
     const animalInput= document.getElementById("animalInput").value;
@@ -20,9 +16,9 @@ window.onload = function() {
     document.querySelector("span#person2b").innerText = person2Input;
     document.querySelector("span#animal").innerText = animalInput;
     document.querySelector("span#verb").innerText = verbInput;
+    document.querySelector("span#verb").innerText = verbInput;
     document.querySelector("span#noun").innerText = nounInput;
     document.querySelector("span#exclamation").innerText = exclamationInput;
-
     document.querySelector("div#story").removeAttribute("class");
   };
 };
